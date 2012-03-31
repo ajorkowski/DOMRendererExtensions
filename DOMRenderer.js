@@ -5,16 +5,16 @@ THREE.DOMRenderer = function () {
 	_width, _height, _widthHalf, _heightHalf, _transformProp;
 	
 	var getSupportedProp = function (proparray) {
-    var root = document.documentElement
-    for ( var i = 0; i < proparray.length; i++ ) { 
-        if (typeof root.style[proparray[i]]=="string") { 
-            return proparray[i]
-        }
-    }
-    return null;
-  };
-  
-  _transformProp = getSupportedProp(['transform', 'MozTransform', 'WebkitTransform', 'msTransform', 'OTransform']);
+		var root = document.documentElement
+		for ( var i = 0; i < proparray.length; i++ ) { 
+			if (typeof root.style[proparray[i]]=="string") { 
+				return proparray[i]
+			}
+		}
+		return null;
+	};
+	
+	_transformProp = getSupportedProp(['transform', 'MozTransform', 'WebkitTransform', 'msTransform', 'OTransform']);
 
 	this.domElement = _div;
 
