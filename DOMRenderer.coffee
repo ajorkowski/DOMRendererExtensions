@@ -19,11 +19,10 @@ this.DOMRenderer = class DOMRenderer
 				v1x = element.x * @widthHalf + @widthHalf - (dom.offsetWidth >> 1)
 				v1y = element.y * @heightHalf + @heightHalf - (dom.offsetHeight >> 1)
 				
-				scaleX = element.scale.x * @widthHalf 
-				scaleY = element.scale.y * @heightHalf
-				scaleVal = "scale(#{scaleX},#{scaleY})"
-				
 				if @transformProp
+					scaleX = element.scale.x * @widthHalf 
+					scaleY = element.scale.y * @heightHalf
+					scaleVal = "scale(#{scaleX},#{scaleY})"
 					dom.style[@transformProp] = scaleVal
 					
 				dom.style.zIndex = Math.abs Math.floor (1 - element.z) * camera.far / camera.near
