@@ -9,6 +9,8 @@ transformations and nothing else. This version of the DOM renderer has the follo
 
 See <a href="https://github.com/mrdoob/three.js/">Three.js</a>
 
+Update: This code has been merged into the Dev version of DOMRenderer
+
 ## Usage
 This renderer only supports rendering Particle objects with a ParticleDOMMaterial in three.js
 
